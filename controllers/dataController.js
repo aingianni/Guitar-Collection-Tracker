@@ -1,68 +1,68 @@
 const Collection = require('../models/collection')
 
 const dataController = {
-    index (req, res, next) {
-        Collection.find({}, (err, foundCollections) => {
-            if (err) {
-                res.status(400).send({
-                  msg: err.message
-                })
-              } else {
-                res.locals.data.collections = foundCollections
-                next()
-              }
+  index (req, res, next) {
+    Collection.find({}, (err, foundCollections) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
         })
-    },
-    destroy (req, res, next) {
-        Collection.findByIdAndDelete(req.params.id, (err, deletedCollection) => {
-            if (err) {
-                res.status(400).send({
-                  msg: err.message
-                })
-              } else {
-                res.locals.data.collection = deletedCollection
-                next()
-              }
+      } else {
+        res.locals.data.collections = foundCollections
+        next()
+      }
+    })
+  },
+  destroy (req, res, next) {
+    Collection.findByIdAndDelete(req.params.id, (err, deletedCollection) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
         })
-    },
-    update (req, res, next) {
-        req.body.bodyShape = req.body.bodyShape === 'on'
-        Collection.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCollection) => {
-            if (err) {
-                res.status(400).send({
-                  msg: err.message
-                })
-              } else {
-                res.locals.data.collection = updatedCollection
-                next()
-              }
+      } else {
+        res.locals.data.collection = deletedCollection
+        next()
+      }
+    })
+  },
+  update (req, res, next) {
+    req.body.bodyShape = req.body.bodyShape === 'on'
+    Collection.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCollection) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
         })
-    },
-    create (req, res, next) {
-        req.body.bodyShape = req.body.bodyShape === 'on'
-        Collection.create(req.body, (err, createdCollection) => {
-            if (err) {
-                res.status(400).send({
-                  msg: err.message
-                })
-              } else {
-                res.locals.data.collection = createdCollection
-                next()
-              }
+      } else {
+        res.locals.data.collection = updatedCollection
+        next()
+      }
+    })
+  },
+  create (req, res, next) {
+    req.body.bodyShape = req.body.bodyShape === 'on'
+    Collection.create(req.body, (err, createdCollection) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
         })
-    },
-    show (req, res, next) {
-        Collection.findById(req.params.id, (err, foundCollection) => {
-            if (err) {
-                res.status(400).send({
-                  msg: err.message
-                })
-              } else {
-                res.locals.data.collection = foundCollection
-                next()
-              }
+      } else {
+        res.locals.data.collection = createdCollection
+        next()
+      }
+    })
+  },
+  show (req, res, next) {
+    Collection.findById(req.params.id, (err, foundCollection) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
         })
-    }
+      } else {
+        res.locals.data.collection = foundCollection
+        next()
+      }
+    })
+  }
 }
 
 module.exports = dataController

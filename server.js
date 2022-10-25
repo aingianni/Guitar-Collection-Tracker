@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000
 // Connect to db
 const db = require('./models/db')
 db.once('open', () => {
-    console.log('Connected to mongoDB')
+  console.log('Connected to mongoDB')
 })
 
 // Initialize View Engine
@@ -16,8 +16,8 @@ app.engine('jsx', require('jsx-view-engine').createEngine())
 
 // Mount middleware
 app.use((req, res, next) => {
-    res.locals.data = {}
-    next()
+  res.locals.data = {}
+  next()
 })
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
@@ -28,5 +28,5 @@ app.use('/collections', require('./controllers/routeController.js'))
 
 // Listen on PORT
 app.listen(PORT, () => {
-    console.log('Listening on 3000', PORT)
+  console.log('Listening on 3000', PORT)
 })
