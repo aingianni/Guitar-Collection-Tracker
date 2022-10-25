@@ -24,7 +24,7 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 // Setting up localhost:3000/blogs as the entry for my routes
-app.use('/blogs', require('./controllers/routeController.js'))
+app.use('/collections', require('./controllers/routeController.js'))
 
 // Listen on PORT
 app.listen(PORT, () => {
