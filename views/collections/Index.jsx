@@ -4,13 +4,13 @@ const Default = require('../Layouts/Default')
 class Index extends React.Component {
   render () {
     const {collections} = this.props
-    const wishList = collections.filter(collection => collection.guitarOwned === false)
-    const collectionList = collections.filter(collection => collection.guitarOwned === true)
+    const wishList = collections.filter(object => !object.guitarOwned)
+    const collectionList = collections.filter(object => object.guitarOwned)
     return (
       <Default>
         <table>
           {
-            collections.map(collection => {
+            wishList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
               return(
                 <tr key={collection._id}>
@@ -34,7 +34,7 @@ class Index extends React.Component {
 
         <table>
           {
-            collections.map(collection => {
+            collectionList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
               return(
                 <tr key={collection._id}>
