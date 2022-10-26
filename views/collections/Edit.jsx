@@ -4,7 +4,9 @@ const Default = require('../Layouts/Default')
 class Edit extends React.Component {
   render () {
     return (
-      <Default />
+      <Default>
+        
+      </Default>
     )
   }
 }
