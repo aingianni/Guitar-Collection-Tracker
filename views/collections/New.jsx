@@ -4,36 +4,36 @@ const Default = require('../Layouts/Default')
 class New extends React.Component {
   render () {
     return (
-      <Default title="Add Guitar">
-          <div id="name-form">
-          Image: 
+      <Default title='Add Guitar'>
+        <div id='name-form'>
+          Image:
           <br />
-          Model: 
+          Model:
           <br />
-          Price: 
+          Price:
           <br />
-          Color: 
+          Color:
           <br />
-          Body Shape: 
+          Body Shape:
           <br />
-          Acquired: 
-          </div>
+          Acquired:
+        </div>
 
-          <div id="entry-form">
+        <div id='entry-form'>
           <form method='POST' action='/collections'>
-          <input class='entry' name='image' placeholder='Image Link for Guitar'></input>
-          <br />
-          <input class='entry' name='model' placeholder='Model of the Guitar'></input>
-          <br />     
-          <input class='entry' name='price' placeholder='Price of the Guitar'></input>
-          <br />    
-          <input class='entry' name='color' placeholder='Color of the Guitar'></input>
-          <br />   
-          <input class='entry' name='bodyShape' placeholder='Body Shape of the Guitar'></input>
-          <br />  
-          <input type='checkbox' name='guitarOwned'></input>
-          <br />
-          <input type='submit' value='Submit Guitar' />
+            <input class='entry' name='image' placeholder='Image Link for Guitar' />
+            <br />
+            <input class='entry' name='model' placeholder='Model of the Guitar' />
+            <br />
+            <input class='entry' name='price' placeholder='Price of the Guitar' />
+            <br />
+            <input class='entry' name='color' placeholder='Color of the Guitar' />
+            <br />
+            <input class='entry' name='bodyShape' placeholder='Body Shape of the Guitar' />
+            <br />
+            <input type='checkbox' name='guitarOwned' />
+            <br />
+            <input type='submit' value='Submit Guitar' />
           </form>
         </div>
       </Default>

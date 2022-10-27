@@ -3,17 +3,17 @@ const Default = require('../Layouts/Default')
 
 class Index extends React.Component {
   render () {
-    const {collections} = this.props
+    const { collections } = this.props
     const wishList = collections.filter(object => !object.guitarOwned)
     const collectionList = collections.filter(object => object.guitarOwned)
     return (
       <Default>
         <table>
-        <th><h1>Collection</h1></th>
+          <th><h1>Collection</h1></th>
           {
             collectionList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
-              return(
+              return (
                 <tr key={collection._id}>
                   <td>
                     <img src={image} />
@@ -24,11 +24,11 @@ class Index extends React.Component {
                     {color}
                   </td>
                   <td>
-                    Price: ${ price }
+                    Price: ${price}
                   </td>
                   <td>
-                    <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>
-                      <input type="submit" value="Delete this Guitar" />
+                    <form method='POST' action={`/collections/${collection._id}?_method=DELETE`}>
+                      <input type='submit' value='Delete this Guitar' />
                     </form>
                   </td>
                 </tr>
@@ -38,11 +38,11 @@ class Index extends React.Component {
         </table>
 
         <table>
-        <th><h1>Wishlist</h1></th>
+          <th><h1>Wishlist</h1></th>
           {
             wishList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
-              return(
+              return (
                 <tr key={collection._id}>
                   <td>
                     <img src={image} />
@@ -53,11 +53,11 @@ class Index extends React.Component {
                     {color}
                   </td>
                   <td>
-                    Price: ${ price }
+                    Price: ${price}
                   </td>
                   <td>
-                    <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>
-                      <input type="submit" value="Delete this Guitar" />
+                    <form method='POST' action={`/collections/${collection._id}?_method=DELETE`}>
+                      <input type='submit' value='Delete this Guitar' />
                     </form>
                   </td>
                 </tr>

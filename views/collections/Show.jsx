@@ -13,7 +13,7 @@ class Show extends React.Component {
           <li> Price: {price}</li>
           <li> Color: {color}</li>
           <li> Body Shape: {bodyShape}</li>
-          <li>{guitarOwned? 'This guitar is in your collection' : 'This guitar is currently on your wishlist'}</li>
+          <li>{guitarOwned ? 'This guitar is in your collection' : 'This guitar is currently on your wishlist'}</li>
         </ul>
       </Default>
     )

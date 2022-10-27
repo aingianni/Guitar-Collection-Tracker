@@ -16,9 +16,9 @@ class Default extends React.Component {
             {collection ? <a href={`/collections/${collection._id}/edit`}>Edit</a> : ''}
           </nav>
 
-          <h1 class="heading">{title}</h1>
+          <h1 class='heading'>{title}</h1>
 
-          <div id="main">
+          <div id='main'>
             {this.props.children}
           </div>
         </body>
