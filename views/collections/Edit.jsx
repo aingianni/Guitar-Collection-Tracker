@@ -5,22 +5,39 @@ class Edit extends React.Component {
   render () {
     const { image, model, _id, color, price, bodyShape, guitarOwned } = this.props.collection
     return (
-      <Default title={`${model} Edit Page`} collection={this.props.collection}>
+      <Default title={`Edit ${model}`} collection={this.props.collection}>
+        <div id="name-form">
+        Image: 
+        <br />
+        Model: 
+        <br />
+        Price: 
+        <br />
+        Color: 
+        <br />
+        Body Shape: 
+        <br />
+        Acquired: 
+        </div>
+
+        <div id="entry-form">
         <form method='POST' action={`/collections/${_id}?_method=PUT`}>
-          Image: <input name='image' defaultValue={image}></input>
+          <input class='entry' name='image' defaultValue={image}></input>
           <br />
-          Model: <input name='model' defaultValue={model}></input>
+          <input class='entry' name='model' defaultValue={model}></input>
           <br />
-          Price: <input name='price' defaultValue={price}></input>
+          <input class='entry' name='price' defaultValue={price}></input>
           <br />
-          Color: <input name='color' defaultValue={color}></input>
+          <input class='entry' name='color' defaultValue={color}></input>
           <br />
-          Body Shape: <input name='bodyShape' defaultValue={bodyShape}></input>
+          <input class='entry' name='bodyShape' defaultValue={bodyShape}></input>
           <br />
-          Acquired: <input type='checkbox' name='guitarOwned' defaultChecked={guitarOwned}></input>
+          <input type='checkbox' name='guitarOwned' defaultChecked={guitarOwned}></input>
           <br />
           <input type='submit' value='Update Guitar' />
         </form>
+        </div>
+
       </Default>
     )
   }

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 body {
     margin: 0;
     background-image: url('https://i.imgur.com/keBOgeo.jpg');
+    font-family: 'Karla', sans-serif;
 }
 
 nav {
@@ -17,6 +19,16 @@ nav > a {
     text-decoration: none;
     font-size: 30px;
     color: white;
+}
+
+nav > a:hover {
+    font-size: 36px;
+    transition: all 500ms;
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
 }
 
 #main {
@@ -42,12 +54,37 @@ table {
     /* border: 2px solid black; */
 }
 
-tr {
-    /* background-color: red; */
+img {
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 td > img {
     height: 100px;
-    border: 2px solid black;
-    border-radius: 2px;
+}
+
+td > h3 > a {
+    text-decoration: none;
+    font-family: 'Mukta', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+td > h3 > a:hover {
+    color: white;
+}
+
+#name-form {
+    text-align: right;
+    width: 50%;
+    font-size: 17.5px;
+}
+
+#entry-form {
+    text-align: left;
+    width: 45%;
+}
+
+.entry {
+    width: 300px;
 }

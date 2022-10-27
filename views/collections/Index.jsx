@@ -19,12 +19,12 @@ class Index extends React.Component {
                     <img src={image} />
                   </td>
                   <td>
-                    <a href={`/collections/${collection._id}`}>{model}</a>
+                    <h3><a href={`/collections/${collection._id}`}>{model}</a></h3>
                     <br />
                     {color}
                   </td>
                   <td>
-                    Price: { price }
+                    Price: ${ price }
                   </td>
                   <td>
                     <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>
@@ -48,12 +48,12 @@ class Index extends React.Component {
                     <img src={image} />
                   </td>
                   <td>
-                    <a href={`/collections/${collection._id}`}>{model}</a>
+                    <h3><a href={`/collections/${collection._id}`}>{model}</a></h3>
                     <br />
                     {color}
                   </td>
                   <td>
-                    Price: { price }
+                    Price: ${ price }
                   </td>
                   <td>
                     <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>

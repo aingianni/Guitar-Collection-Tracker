@@ -4,22 +4,38 @@ const Default = require('../Layouts/Default')
 class New extends React.Component {
   render () {
     return (
-      <Default title="Add Guitar to Collection">
-        <form method='POST' action='/collections'>
-          Image: <input name='image' placeholder='Image Link for Guitar'></input>
+      <Default title="Add Guitar">
+          <div id="name-form">
+          Image: 
           <br />
-          Model: <input name='model' placeholder='Model of the Guitar'></input>
+          Model: 
           <br />
-          Price: <input name='price' placeholder='Price of the Guitar'></input>
+          Price: 
           <br />
-          Color: <input name='color' placeholder='Color of the Guitar'></input>
+          Color: 
           <br />
-          Body Shape: <input name='bodyShape' placeholder='Body Shape of the Guitar'></input>
+          Body Shape: 
           <br />
-          Acquired: <input type='checkbox' name='guitarOwned'></input>
+          Acquired: 
+          </div>
+
+          <div id="entry-form">
+          <form method='POST' action='/collections'>
+          <input class='entry' name='image' placeholder='Image Link for Guitar'></input>
+          <br />
+          <input class='entry' name='model' placeholder='Model of the Guitar'></input>
+          <br />     
+          <input class='entry' name='price' placeholder='Price of the Guitar'></input>
+          <br />    
+          <input class='entry' name='color' placeholder='Color of the Guitar'></input>
+          <br />   
+          <input class='entry' name='bodyShape' placeholder='Body Shape of the Guitar'></input>
+          <br />  
+          <input type='checkbox' name='guitarOwned'></input>
           <br />
           <input type='submit' value='Submit Guitar' />
-        </form>
+          </form>
+        </div>
       </Default>
     )
   }
