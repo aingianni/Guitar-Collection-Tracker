@@ -9,22 +9,27 @@ class Index extends React.Component {
     return (
       <Default>
         <table>
+        <th><h1>Collection</h1></th>
           {
-            wishList.map(collection => {
+            collectionList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
               return(
                 <tr key={collection._id}>
                   <td>
+                    <img src={image} />
+                  </td>
+                  <td>
                     <a href={`/collections/${collection._id}`}>{model}</a>
                     <br />
                     {color}
-                    <br />
+                  </td>
+                  <td>
+                    Price: { price }
+                  </td>
+                  <td>
                     <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>
                       <input type="submit" value="Delete this Guitar" />
                     </form>
-                  </td>
-                  <td>
-                    <img src={image} />
                   </td>
                 </tr>
               )
@@ -33,22 +38,27 @@ class Index extends React.Component {
         </table>
 
         <table>
+        <th><h1>Wishlist</h1></th>
           {
-            collectionList.map(collection => {
+            wishList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
               return(
                 <tr key={collection._id}>
                   <td>
+                    <img src={image} />
+                  </td>
+                  <td>
                     <a href={`/collections/${collection._id}`}>{model}</a>
                     <br />
                     {color}
-                    <br />
+                  </td>
+                  <td>
+                    Price: { price }
+                  </td>
+                  <td>
                     <form method="POST" action={`/collections/${collection._id}?_method=DELETE`}>
                       <input type="submit" value="Delete this Guitar" />
                     </form>
-                  </td>
-                  <td>
-                    <img src={image} />
                   </td>
                 </tr>
               )

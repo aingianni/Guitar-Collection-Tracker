@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap');
+
+body {
+    margin: 0;
+    background-image: url('https://i.imgur.com/keBOgeo.jpg');
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+nav > a {
+    font-family: 'Mukta', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(200, 200, 200, .7);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    overflow-y: auto;
+}
+
+table {
+    table-layout: fixed;
+    width: 45%;
+    max-height: 80%;
+    /* border: 2px solid black; */
+}
+
+tr {
+    /* background-color: red; */
+}
+
+td > img {
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 2px;
+}

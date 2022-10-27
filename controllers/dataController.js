@@ -26,7 +26,7 @@ const dataController = {
     })
   },
   update (req, res, next) {
-    req.body.bodyShape = req.body.bodyShape === 'on'
+    req.body.guitarOwned = req.body.guitarOwned === 'on'
     Collection.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCollection) => {
       if (err) {
         res.status(400).send({
@@ -39,7 +39,7 @@ const dataController = {
     })
   },
   create (req, res, next) {
-    req.body.bodyShape = req.body.bodyShape === 'on'
+    req.body.guitarOwned = req.body.guitarOwned === 'on'
     Collection.create(req.body, (err, createdCollection) => {
       if (err) {
         res.status(400).send({

@@ -6,7 +6,7 @@ class Default extends React.Component {
     return (
       <html>
         <head>
-          <link rel='stylesheet' href='/css.app.css' />
+          <link rel='stylesheet' href='/css/app.css' />
           <title>{title}</title>
         </head>
         <body>
@@ -18,7 +18,7 @@ class Default extends React.Component {
 
           <h1>{title}</h1>
 
-          <div>
+          <div id="main">
             {this.props.children}
           </div>
         </body>
