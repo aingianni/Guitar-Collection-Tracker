@@ -31,3 +31,13 @@
         <li>Login functionality</li>
     </ul>
 </p>
+
+## Resources
+<ul>
+    <li><a href='https://trello.com/b/yOopgo8N/project-2' target='blank'>Trello</a></li>
+    <li><a href='https://i.imgur.com/1txB2Xy.png' target='blank'>ERD</a></li>
+</ul>
+
+## Wireframes
+<img src='https://i.imgur.com/T7fWQ68.png' />
+<img src='https://i.imgur.com/xMaSdGv.png' />
