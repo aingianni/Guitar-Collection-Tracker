@@ -8,7 +8,7 @@ class Show extends React.Component {
       <Default title={`${model}`} collection={this.props.collection}>
         <img src={image} />
         <div id='spacer' />
-        <div>
+        <div id='show-content'>
           <ul>
             <li> Model: {model}</li>
             <li> Price: {price}</li>
@@ -21,24 +21,24 @@ class Show extends React.Component {
               </form>
             </li>
           </ul>
-
+          <h4>Notes</h4>
           {
           comments.length
             ? comments.map((comment) => {
               return (
                 <div key={comment._id}>
-                  <p>Name: {comment.commentName}</p>
+                  <p>Title: {comment.commentName}</p>
                   <p>Note: {comment.commentBody}</p>
                 </div>
               )
             })
             : ''
         }
-
+          <h4>Leave a Note</h4>
           <form method='POST' action={`/collections/${_id}/comments?_method=PUT`}>
-            <input type='text' name='commentName' />
+            <input type='text' name='commentName' placeholder='Title of Note'/>
             <br />
-            <input type='text' name='commentBody' />
+            <input type='text' name='commentBody' placeholder='Content of Note'/>
             <br />
             <input type='submit' value='submit' />
           </form>

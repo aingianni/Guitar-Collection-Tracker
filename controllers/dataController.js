@@ -64,7 +64,6 @@ const dataController = {
     })
   },
   updateComment (req, res, next) {
-    console.log(req.body)
     Collection.findById(req.params.id, (err, foundCollection) => {
       if (err) {
         res.status(400).send({ msg: err.message })
