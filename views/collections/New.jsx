@@ -19,6 +19,8 @@ class New extends React.Component {
           Acquired:
         </div>
 
+        <div id='spacer' />
+
         <div id='entry-form'>
           <form method='POST' action='/collections'>
             <input class='entry' name='image' placeholder='Image Link for Guitar' />

@@ -9,7 +9,7 @@ class Index extends React.Component {
     return (
       <Default>
         <table>
-          <th><h1>Collection</h1></th>
+          <th><h1 class='heading'>Collection</h1></th>
           {
             collectionList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
@@ -20,7 +20,6 @@ class Index extends React.Component {
                   </td>
                   <td>
                     <h3><a href={`/collections/${collection._id}`}>{model}</a></h3>
-                    <br />
                     {color}
                   </td>
                   <td>
@@ -38,7 +37,7 @@ class Index extends React.Component {
         </table>
 
         <table>
-          <th><h1>Wishlist</h1></th>
+          <th><h1 class='heading'>Wishlist</h1></th>
           {
             wishList.map(collection => {
               const { image, model, _id, color, price, bodyShape, guitarOwned } = collection
@@ -49,7 +48,6 @@ class Index extends React.Component {
                   </td>
                   <td>
                     <h3><a href={`/collections/${collection._id}`}>{model}</a></h3>
-                    <br />
                     {color}
                   </td>
                   <td>

@@ -20,6 +20,8 @@ class Edit extends React.Component {
           Acquired:
         </div>
 
+        <div id='spacer' />
+
         <div id='entry-form'>
           <form method='POST' action={`/collections/${_id}?_method=PUT`}>
             <input class='entry' name='image' defaultValue={image} />

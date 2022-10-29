@@ -62,6 +62,25 @@ const dataController = {
         next()
       }
     })
+  },
+  updateComment (req, res, next) {
+    console.log(req.body)
+    Collection.findById(req.params.id, (err, foundCollection) => {
+      if (err) {
+        res.status(400).send({ msg: err.message })
+      } else {
+        foundCollection.comments.push(req.body)
+
+        Collection.findByIdAndUpdate(req.params.id, foundCollection, { new: true }, (err, updatedCollection) => {
+          if (err) {
+            res.status(400).send({ msg: err.message })
+          } else {
+            res.locals.data.collection = updatedCollection
+            next()
+          }
+        })
+      }
+    })
   }
 }
 

@@ -13,7 +13,7 @@ class Default extends React.Component {
           <nav>
             <a href='/collections'>Collections Home</a>
             <a href='/collections/new'>Add Guitar</a>
-            {collection ? <a href={`/collections/${collection._id}/edit`}>Edit</a> : ''}
+            {collection ? <a href={`/collections/${collection._id}/edit`}>Edit Guitar</a> : ''}
           </nav>
 
           <h1 class='heading'>{title}</h1>

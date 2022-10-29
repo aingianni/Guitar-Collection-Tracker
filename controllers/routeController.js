@@ -25,4 +25,7 @@ router.get('/:id/edit', dataController.show, viewController.edit)
 // SHOW
 router.get('/:id', dataController.show, viewController.show)
 
+// COMMENT
+router.put('/:id/comments', dataController.updateComment, viewController.redirectShow)
+
 module.exports = router

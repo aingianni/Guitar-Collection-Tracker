@@ -6,7 +6,11 @@ const collectionSchema = new mongoose.Schema({
   price: { type: String, required: true },
   color: { type: String, required: true },
   bodyShape: { type: String, required: true },
-  guitarOwned: Boolean
+  guitarOwned: Boolean,
+  comments: [{
+    commentName: { type: String, required: true },
+    commentBody: { type: String, required: true }
+  }]
 })
 
 const Collection = mongoose.model('Collection', collectionSchema)
