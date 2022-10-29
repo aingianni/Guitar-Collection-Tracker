@@ -16,7 +16,7 @@
 </p>
 
 ## Getting Started
-<a href='' target='blank'>Deployed Project</a>
+<a href='' target='_blank'>Deployed Project</a>
 <br />
 <p>
     The app is fairly simple. The big determining factor when adding a guitar to the collection is the boolean. The boolean will determine if the guitar goes to the collection or the wishlist.
@@ -34,8 +34,8 @@
 
 ## Resources
 <ul>
-    <li><a href='https://trello.com/b/yOopgo8N/project-2' target='blank'>Trello</a></li>
-    <li><a href='https://i.imgur.com/1txB2Xy.png' target='blank'>ERD</a></li>
+    <li><a href='https://trello.com/b/yOopgo8N/project-2' target='_blank'>Trello</a></li>
+    <li><a href='https://i.imgur.com/1txB2Xy.png' target='_blank'>ERD</a></li>
 </ul>
 
 ## Wireframes
