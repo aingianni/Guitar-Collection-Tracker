@@ -3,6 +3,18 @@
     This app is designed to allow a user to keep track of their collection of guitars. It also serves as a wishlist for guitars the user may want to buy. By using the edit feature the user can actively toggle between owning a guitar and having it on their wishlist.
 </p>
 
+## Restful Routes
+
+| # | Action | URL | HTTP Verb | JSX View Filename | Mongoose Method |
+| ----------- | -------------| --------------| --------------| --------------| --------------|
+| 1 | Index | /collections/ | GET | Index.jsx | Collection.find() |
+| 2 | Show | /collections/:id | GET | Show.jsx | Collection.findById() |
+| 3 | New | /collections/new | GET | New.jsx | none |
+| 4 | Create | /collections/ | POST | none | Collection.create(req.body) |
+| 5 | Edit | /collections/:id/edit | GET | Edit.jsx | Collection.findById() |
+| 6 | Update | /collections/:id | PUT | none | Collection.findByIdAndUpdate() |
+| 7 | Destroy | /collections/:id | DELETE | none | Collection.findByIdAndDelete() |
+
 ## Screenshots
 <p>
     <img src='https://i.imgur.com/2Bk4QIz.png' />
