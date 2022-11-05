@@ -28,7 +28,7 @@
 </p>
 
 ## Getting Started
-<a href='' target='_blank'>Deployed Project</a>
+<a href='https://guitar-collection-tracker.herokuapp.com/collections' target='_blank'>Deployed Project</a>
 <br />
 <p>
     The app is fairly simple. The big determining factor when adding a guitar to the collection is the boolean. The boolean will determine if the guitar goes to the collection or the wishlist.
